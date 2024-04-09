@@ -38,8 +38,10 @@ jobs:
           fetch-depth: 0
       - name: make
         run: make
+      - name: make clean
+        run: make clean
 
-  push_to_mirror:
+    push_to_mirror:
     needs: [check_coding_style, check_program_compilation]
     runs-on: ubuntu-latest
     steps:
